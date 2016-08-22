@@ -1,0 +1,739 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     23430,        730]
+NotebookOptionsPosition[     20980,        640]
+NotebookOutlinePosition[     21333,        656]
+CellTagsIndexPosition[     21290,        653]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["1D Parametrized functions notebook :", "Title",
+ CellChangeTimes->{{3.680842315577482*^9, 3.6808423411354437`*^9}},
+ Background->RGBColor[0.87, 0.94, 1]],
+
+Cell["\<\
+This notebook contains the automatic calculations of everything that we need \
+to write in the code parametrized functions of one variable.\
+\>", "Text",
+ CellChangeTimes->{{3.6808423472062883`*^9, 3.680842381621338*^9}},
+ FontSize->16],
+
+Cell["Authors: Marco Raveri", "Text",
+ CellChangeTimes->{{3.68084511898875*^9, 3.680845131923455*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["1) Zero parametrization:", "Subsection",
+ CellChangeTimes->{3.68084245829568*^9, 3.6808428352916*^9},
+ Background->RGBColor[0.87, 0.94, 1]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"f1D", "[", "a_", "]"}], ":=", "0"}]], "Input",
+ CellChangeTimes->{{3.6796355017762327`*^9, 3.679635510607101*^9}, {
+  3.6796355570559053`*^9, 3.679635558837956*^9}, {3.680841925764352*^9, 
+  3.680841926017457*^9}, {3.68084247157837*^9, 3.680842472333592*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"assumptions", "=", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"a", "<", "1"}], ",", 
+    RowBox[{"a", ">", "0"}]}], "}"}]}]], "Input",
+ CellChangeTimes->{{3.680842759831109*^9, 3.680842762852132*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"a", "<", "1"}], ",", 
+   RowBox[{"a", ">", "0"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.680842784451459*^9, 3.68084499640818*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"Print", "[", 
+  RowBox[{"\"\<Value             : \>\"", ",", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"f1D", "[", "a", "]"}], "//", "Simplify"}], "//", 
+    "FullSimplify"}]}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", 
+  RowBox[{"\"\<First derivative  : \>\"", ",", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"D", "[", 
+      RowBox[{
+       RowBox[{"f1D", "[", "a", "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"a", ",", "1"}], "}"}]}], "]"}], "//", "Simplify"}], "//", 
+    "FullSimplify"}]}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", 
+  RowBox[{"\"\<Second derivative : \>\"", ",", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"D", "[", 
+      RowBox[{
+       RowBox[{"f1D", "[", "a", "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"a", ",", "2"}], "}"}]}], "]"}], "//", "Simplify"}], "//", 
+    "FullSimplify"}]}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", 
+  RowBox[{"\"\<Third derivative  : \>\"", ",", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"D", "[", 
+      RowBox[{
+       RowBox[{"f1D", "[", "a", "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"a", ",", "3"}], "}"}]}], "]"}], "//", "Simplify"}], "//", 
+    "FullSimplify"}]}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Print", "[", 
+   RowBox[{"\"\<The integral      : \>\"", ",", " ", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"Assuming", "[", 
+        RowBox[{"assumptions", ",", 
+         RowBox[{"Exp", "[", 
+          RowBox[{
+           RowBox[{"-", "3"}], "*", 
+           RowBox[{"Integrate", "[", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{"1", "+", 
+                RowBox[{"f1D", "[", "at", "]"}]}], ")"}], "/", "at"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"at", ",", "1", ",", "a"}], "}"}]}], "]"}]}], "]"}]}], 
+        "]"}], "*", 
+       RowBox[{"a", "^", "2"}]}], "//", "Simplify"}], "//", 
+     "FullSimplify"}]}], "]"}], " "}]}], "Input",
+ CellChangeTimes->{{3.6808425045764027`*^9, 3.680842517350565*^9}, {
+  3.6808425648859577`*^9, 3.680842587334239*^9}, {3.680842636473365*^9, 
+  3.680842814714718*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Value             : \"\>", "\[InvisibleSpace]", "0"}],
+  SequenceForm["Value             : ", 0],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.680842794087531*^9, 3.680842815515424*^9}, 
+   3.680844996458867*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"First derivative  : \"\>", "\[InvisibleSpace]", "0"}],
+  SequenceForm["First derivative  : ", 0],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.680842794087531*^9, 3.680842815515424*^9}, 
+   3.6808449964714003`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Second derivative : \"\>", "\[InvisibleSpace]", "0"}],
+  SequenceForm["Second derivative : ", 0],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.680842794087531*^9, 3.680842815515424*^9}, 
+   3.6808449964833193`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Third derivative  : \"\>", "\[InvisibleSpace]", "0"}],
+  SequenceForm["Third derivative  : ", 0],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.680842794087531*^9, 3.680842815515424*^9}, 
+   3.680844996495316*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"The integral      : \"\>", "\[InvisibleSpace]", 
+   FractionBox["1", "a"]}],
+  SequenceForm["The integral      : ", $CellContext`a^(-1)],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.680842794087531*^9, 3.680842815515424*^9}, 
+   3.680844996826982*^9}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["2) LCDM w_DE:", "Subsection",
+ CellChangeTimes->{
+  3.68084245829568*^9, {3.6808428266026173`*^9, 3.6808428494565687`*^9}},
+ Background->RGBColor[0.87, 0.94, 1]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"f1D", "[", "a_", "]"}], ":=", 
+  RowBox[{"-", "1"}]}]], "Input",
+ CellChangeTimes->{{3.6796355017762327`*^9, 3.679635510607101*^9}, {
+  3.6796355570559053`*^9, 3.679635558837956*^9}, {3.680841925764352*^9, 
+  3.680841926017457*^9}, {3.68084247157837*^9, 3.680842472333592*^9}, {
+  3.6808428387794*^9, 3.6808428390417957`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"assumptions", "=", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"a", "<", "1"}], ",", 
+    RowBox[{"a", ">", "0"}]}], "}"}]}]], "Input",
+ CellChangeTimes->{{3.680842759831109*^9, 3.680842762852132*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"a", "<", "1"}], ",", 
+   RowBox[{"a", ">", "0"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.680842784451459*^9, 3.6808428432029953`*^9, 
+  3.680844996892849*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"Print", "[", 
+  RowBox[{"\"\<Value             : \>\"", ",", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"f1D", "[", "a", "]"}], "//", "Simplify"}], "//", 
+    "FullSimplify"}]}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", 
+  RowBox[{"\"\<First derivative  : \>\"", ",", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"D", "[", 
+      RowBox[{
+       RowBox[{"f1D", "[", "a", "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"a", ",", "1"}], "}"}]}], "]"}], "//", "Simplify"}], "//", 
+    "FullSimplify"}]}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", 
+  RowBox[{"\"\<Second derivative : \>\"", ",", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"D", "[", 
+      RowBox[{
+       RowBox[{"f1D", "[", "a", "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"a", ",", "2"}], "}"}]}], "]"}], "//", "Simplify"}], "//", 
+    "FullSimplify"}]}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", 
+  RowBox[{"\"\<Third derivative  : \>\"", ",", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"D", "[", 
+      RowBox[{
+       RowBox[{"f1D", "[", "a", "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"a", ",", "3"}], "}"}]}], "]"}], "//", "Simplify"}], "//", 
+    "FullSimplify"}]}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Print", "[", 
+   RowBox[{"\"\<The integral      : \>\"", ",", " ", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"Assuming", "[", 
+        RowBox[{"assumptions", ",", 
+         RowBox[{"Exp", "[", 
+          RowBox[{
+           RowBox[{"-", "3"}], "*", 
+           RowBox[{"Integrate", "[", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{"1", "+", 
+                RowBox[{"f1D", "[", "at", "]"}]}], ")"}], "/", "at"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"at", ",", "1", ",", "a"}], "}"}]}], "]"}]}], "]"}]}], 
+        "]"}], "*", 
+       RowBox[{"a", "^", "2"}]}], "//", "Simplify"}], "//", 
+     "FullSimplify"}]}], "]"}], " "}]}], "Input",
+ CellChangeTimes->{{3.6808425045764027`*^9, 3.680842517350565*^9}, {
+  3.6808425648859577`*^9, 3.680842587334239*^9}, {3.680842636473365*^9, 
+  3.680842814714718*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Value             : \"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "1"}]}],
+  SequenceForm["Value             : ", -1],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.680842794087531*^9, 3.6808428432398357`*^9}, 
+   3.680844996942409*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"First derivative  : \"\>", "\[InvisibleSpace]", "0"}],
+  SequenceForm["First derivative  : ", 0],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.680842794087531*^9, 3.6808428432398357`*^9}, 
+   3.680844996953816*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Second derivative : \"\>", "\[InvisibleSpace]", "0"}],
+  SequenceForm["Second derivative : ", 0],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.680842794087531*^9, 3.6808428432398357`*^9}, 
+   3.6808449969653587`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Third derivative  : \"\>", "\[InvisibleSpace]", "0"}],
+  SequenceForm["Third derivative  : ", 0],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.680842794087531*^9, 3.6808428432398357`*^9}, 
+   3.680844996976853*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"The integral      : \"\>", "\[InvisibleSpace]", 
+   SuperscriptBox["a", "2"]}],
+  SequenceForm["The integral      : ", $CellContext`a^2],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.680842794087531*^9, 3.6808428432398357`*^9}, 
+   3.680844996988722*^9}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["3) constant parametrization:", "Subsection",
+ CellChangeTimes->{
+  3.68084245829568*^9, {3.6808428266026173`*^9, 3.680842863592346*^9}},
+ Background->RGBColor[0.87, 0.94, 1]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"f1D", "[", "a_", "]"}], ":=", "f0"}]], "Input",
+ CellChangeTimes->{{3.6796355017762327`*^9, 3.679635510607101*^9}, {
+  3.6796355570559053`*^9, 3.679635558837956*^9}, {3.680841925764352*^9, 
+  3.680841926017457*^9}, {3.68084247157837*^9, 3.680842472333592*^9}, {
+  3.6808428387794*^9, 3.680842867201105*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"assumptions", "=", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"f0", "\[Element]", "Reals"}], ",", 
+    RowBox[{"a", "<", "1"}], ",", 
+    RowBox[{"a", ">", "0"}]}], "}"}]}]], "Input",
+ CellChangeTimes->{{3.680842759831109*^9, 3.680842762852132*^9}, {
+  3.680842870928808*^9, 3.680842876201939*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"f0", "\[Element]", "Reals"}], ",", 
+   RowBox[{"a", "<", "1"}], ",", 
+   RowBox[{"a", ">", "0"}]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.680842784451459*^9, 3.6808428432029953`*^9, {3.6808428769999933`*^9, 
+   3.680842879175974*^9}, 3.680844997054377*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"Print", "[", 
+  RowBox[{"\"\<Value             : \>\"", ",", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"f1D", "[", "a", "]"}], "//", "Simplify"}], "//", 
+    "FullSimplify"}]}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", 
+  RowBox[{"\"\<First derivative  : \>\"", ",", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"D", "[", 
+      RowBox[{
+       RowBox[{"f1D", "[", "a", "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"a", ",", "1"}], "}"}]}], "]"}], "//", "Simplify"}], "//", 
+    "FullSimplify"}]}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", 
+  RowBox[{"\"\<Second derivative : \>\"", ",", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"D", "[", 
+      RowBox[{
+       RowBox[{"f1D", "[", "a", "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"a", ",", "2"}], "}"}]}], "]"}], "//", "Simplify"}], "//", 
+    "FullSimplify"}]}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", 
+  RowBox[{"\"\<Third derivative  : \>\"", ",", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"D", "[", 
+      RowBox[{
+       RowBox[{"f1D", "[", "a", "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"a", ",", "3"}], "}"}]}], "]"}], "//", "Simplify"}], "//", 
+    "FullSimplify"}]}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Print", "[", 
+   RowBox[{"\"\<The integral      : \>\"", ",", " ", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"Assuming", "[", 
+        RowBox[{"assumptions", ",", 
+         RowBox[{"Exp", "[", 
+          RowBox[{
+           RowBox[{"-", "3"}], "*", 
+           RowBox[{"Integrate", "[", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{"1", "+", 
+                RowBox[{"f1D", "[", "at", "]"}]}], ")"}], "/", "at"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"at", ",", "1", ",", "a"}], "}"}]}], "]"}]}], "]"}]}], 
+        "]"}], "*", 
+       RowBox[{"a", "^", "2"}]}], "//", "Simplify"}], "//", 
+     "FullSimplify"}]}], "]"}], " "}]}], "Input",
+ CellChangeTimes->{{3.6808425045764027`*^9, 3.680842517350565*^9}, {
+  3.6808425648859577`*^9, 3.680842587334239*^9}, {3.680842636473365*^9, 
+  3.680842814714718*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Value             : \"\>", "\[InvisibleSpace]", "f0"}],
+  SequenceForm["Value             : ", $CellContext`f0],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.680842794087531*^9, 3.6808428432398357`*^9}, 
+   3.68084287976457*^9, 3.6808449971106653`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"First derivative  : \"\>", "\[InvisibleSpace]", "0"}],
+  SequenceForm["First derivative  : ", 0],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.680842794087531*^9, 3.6808428432398357`*^9}, 
+   3.68084287976457*^9, 3.680844997119488*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Second derivative : \"\>", "\[InvisibleSpace]", "0"}],
+  SequenceForm["Second derivative : ", 0],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.680842794087531*^9, 3.6808428432398357`*^9}, 
+   3.68084287976457*^9, 3.680844997129757*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Third derivative  : \"\>", "\[InvisibleSpace]", "0"}],
+  SequenceForm["Third derivative  : ", 0],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.680842794087531*^9, 3.6808428432398357`*^9}, 
+   3.68084287976457*^9, 3.6808449971391582`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"The integral      : \"\>", "\[InvisibleSpace]", 
+   SuperscriptBox["a", 
+    RowBox[{
+     RowBox[{"-", "1"}], "-", 
+     RowBox[{"3", " ", "f0"}]}]]}],
+  SequenceForm[
+  "The integral      : ", $CellContext`a^(-1 - 3 $CellContext`f0)],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.680842794087531*^9, 3.6808428432398357`*^9}, 
+   3.68084287976457*^9, 3.680844997298071*^9}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["4) linear parametrization:", "Subsection",
+ CellChangeTimes->{
+  3.68084245829568*^9, {3.6808428266026173`*^9, 3.680842863592346*^9}, {
+   3.6808428938497553`*^9, 3.680842896655197*^9}},
+ Background->RGBColor[0.87, 0.94, 1]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"f1D", "[", "a_", "]"}], ":=", 
+  RowBox[{"f0", "*", "a"}]}]], "Input",
+ CellChangeTimes->{{3.6796355017762327`*^9, 3.679635510607101*^9}, {
+  3.6796355570559053`*^9, 3.679635558837956*^9}, {3.680841925764352*^9, 
+  3.680841926017457*^9}, {3.68084247157837*^9, 3.680842472333592*^9}, {
+  3.6808428387794*^9, 3.680842867201105*^9}, {3.6808428993616*^9, 
+  3.680842900368483*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"assumptions", "=", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"f0", "\[Element]", "Reals"}], ",", 
+    RowBox[{"a", "<", "1"}], ",", 
+    RowBox[{"a", ">", "0"}]}], "}"}]}]], "Input",
+ CellChangeTimes->{{3.680842759831109*^9, 3.680842762852132*^9}, {
+  3.680842870928808*^9, 3.680842876201939*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"f0", "\[Element]", "Reals"}], ",", 
+   RowBox[{"a", "<", "1"}], ",", 
+   RowBox[{"a", ">", "0"}]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.680842784451459*^9, 3.6808428432029953`*^9, {3.6808428769999933`*^9, 
+   3.680842904065666*^9}, 3.680844997521509*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"Print", "[", 
+  RowBox[{"\"\<Value             : \>\"", ",", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"f1D", "[", "a", "]"}], "//", "Simplify"}], "//", 
+    "FullSimplify"}]}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", 
+  RowBox[{"\"\<First derivative  : \>\"", ",", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"D", "[", 
+      RowBox[{
+       RowBox[{"f1D", "[", "a", "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"a", ",", "1"}], "}"}]}], "]"}], "//", "Simplify"}], "//", 
+    "FullSimplify"}]}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", 
+  RowBox[{"\"\<Second derivative : \>\"", ",", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"D", "[", 
+      RowBox[{
+       RowBox[{"f1D", "[", "a", "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"a", ",", "2"}], "}"}]}], "]"}], "//", "Simplify"}], "//", 
+    "FullSimplify"}]}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", 
+  RowBox[{"\"\<Third derivative  : \>\"", ",", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"D", "[", 
+      RowBox[{
+       RowBox[{"f1D", "[", "a", "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"a", ",", "3"}], "}"}]}], "]"}], "//", "Simplify"}], "//", 
+    "FullSimplify"}]}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Print", "[", 
+   RowBox[{"\"\<The integral      : \>\"", ",", " ", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"Assuming", "[", 
+        RowBox[{"assumptions", ",", 
+         RowBox[{"Exp", "[", 
+          RowBox[{
+           RowBox[{"-", "3"}], "*", 
+           RowBox[{"Integrate", "[", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{"1", "+", 
+                RowBox[{"f1D", "[", "at", "]"}]}], ")"}], "/", "at"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"at", ",", "1", ",", "a"}], "}"}]}], "]"}]}], "]"}]}], 
+        "]"}], "*", 
+       RowBox[{"a", "^", "2"}]}], "//", "Simplify"}], "//", 
+     "FullSimplify"}]}], "]"}], " "}]}], "Input",
+ CellChangeTimes->{{3.6808425045764027`*^9, 3.680842517350565*^9}, {
+  3.6808425648859577`*^9, 3.680842587334239*^9}, {3.680842636473365*^9, 
+  3.680842814714718*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Value             : \"\>", "\[InvisibleSpace]", 
+   RowBox[{"a", " ", "f0"}]}],
+  SequenceForm["Value             : ", $CellContext`a $CellContext`f0],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.680842794087531*^9, 3.6808428432398357`*^9}, {
+   3.68084287976457*^9, 3.680842904121471*^9}, 3.6808449975765047`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"First derivative  : \"\>", "\[InvisibleSpace]", "f0"}],
+  SequenceForm["First derivative  : ", $CellContext`f0],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.680842794087531*^9, 3.6808428432398357`*^9}, {
+   3.68084287976457*^9, 3.680842904121471*^9}, 3.68084499758288*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Second derivative : \"\>", "\[InvisibleSpace]", "0"}],
+  SequenceForm["Second derivative : ", 0],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.680842794087531*^9, 3.6808428432398357`*^9}, {
+   3.68084287976457*^9, 3.680842904121471*^9}, 3.6808449975924377`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Third derivative  : \"\>", "\[InvisibleSpace]", "0"}],
+  SequenceForm["Third derivative  : ", 0],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.680842794087531*^9, 3.6808428432398357`*^9}, {
+   3.68084287976457*^9, 3.680842904121471*^9}, 3.680844997595607*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"The integral      : \"\>", "\[InvisibleSpace]", 
+   FractionBox[
+    SuperscriptBox["\[ExponentialE]", 
+     RowBox[{
+      RowBox[{"-", "3"}], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", "1"}], "+", "a"}], ")"}], " ", "f0"}]], "a"]}],
+  SequenceForm[
+  "The integral      : ", $CellContext`a^(-1) 
+   E^((-3) (-1 + $CellContext`a) $CellContext`f0)],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.680842794087531*^9, 3.6808428432398357`*^9}, {
+   3.68084287976457*^9, 3.680842904121471*^9}, 3.680844997809239*^9}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1440, 851},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (June 27, \
+2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 159, 2, 108, "Title"],
+Cell[742, 26, 246, 5, 33, "Text"],
+Cell[991, 33, 102, 1, 30, "Text"],
+Cell[CellGroupData[{
+Cell[1118, 38, 145, 2, 60, "Subsection"],
+Cell[1266, 42, 294, 5, 28, "Input"],
+Cell[CellGroupData[{
+Cell[1585, 51, 222, 6, 28, "Input"],
+Cell[1810, 59, 184, 5, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2031, 69, 2161, 61, 97, "Input"],
+Cell[CellGroupData[{
+Cell[4217, 134, 268, 6, 21, "Print"],
+Cell[4488, 142, 270, 6, 21, "Print"],
+Cell[4761, 150, 270, 6, 21, "Print"],
+Cell[5034, 158, 268, 6, 21, "Print"],
+Cell[5305, 166, 308, 7, 38, "Print"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5674, 180, 167, 3, 60, "Subsection"],
+Cell[5844, 185, 361, 7, 28, "Input"],
+Cell[CellGroupData[{
+Cell[6230, 196, 222, 6, 28, "Input"],
+Cell[6455, 204, 212, 6, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6704, 215, 2161, 61, 97, "Input"],
+Cell[CellGroupData[{
+Cell[8890, 280, 290, 7, 21, "Print"],
+Cell[9183, 289, 270, 6, 21, "Print"],
+Cell[9456, 297, 272, 6, 21, "Print"],
+Cell[9731, 305, 270, 6, 21, "Print"],
+Cell[10004, 313, 310, 7, 24, "Print"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10375, 327, 180, 3, 60, "Subsection"],
+Cell[10558, 332, 342, 6, 28, "Input"],
+Cell[CellGroupData[{
+Cell[10925, 342, 320, 8, 28, "Input"],
+Cell[11248, 352, 312, 8, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11597, 365, 2161, 61, 97, "Input"],
+Cell[CellGroupData[{
+Cell[13783, 430, 308, 6, 21, "Print"],
+Cell[14094, 438, 291, 6, 21, "Print"],
+Cell[14388, 446, 291, 6, 21, "Print"],
+Cell[14682, 454, 293, 6, 21, "Print"],
+Cell[14978, 462, 430, 11, 24, "Print"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15469, 480, 230, 4, 60, "Subsection"],
+Cell[15702, 486, 412, 8, 28, "Input"],
+Cell[CellGroupData[{
+Cell[16139, 498, 320, 8, 28, "Input"],
+Cell[16462, 508, 312, 8, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16811, 521, 2161, 61, 97, "Input"],
+Cell[CellGroupData[{
+Cell[18997, 586, 371, 7, 21, "Print"],
+Cell[19371, 595, 329, 6, 21, "Print"],
+Cell[19703, 603, 317, 6, 21, "Print"],
+Cell[20023, 611, 315, 6, 21, "Print"],
+Cell[20341, 619, 587, 15, 41, "Print"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
