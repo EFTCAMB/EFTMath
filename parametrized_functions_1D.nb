@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     38791,       1198]
-NotebookOptionsPosition[     35262,       1072]
-NotebookOutlinePosition[     35623,       1088]
-CellTagsIndexPosition[     35580,       1085]
+NotebookDataLength[     39668,       1215]
+NotebookOptionsPosition[     36101,       1088]
+NotebookOutlinePosition[     36459,       1104]
+CellTagsIndexPosition[     36416,       1101]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -1068,11 +1068,27 @@ $CellContext`s > 0]],
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
-}, Open  ]]
+}, Open  ]],
+
+Cell[BoxData[Cell[TextData[StyleBox[" 4) CPL parametrization:                 \
+                                                                              \
+                                  ",
+  FontFamily->"Bitstream Vera Sans",
+  FontSize->20,
+  FontWeight->"Plain"]], "Section",
+  CellChangeTimes->{
+   3.68084245829568*^9, {3.6808428266026173`*^9, 3.680842863592346*^9}, {
+    3.6808428938497553`*^9, 3.680842896655197*^9}},
+  Background->RGBColor[0.87, 0.94, 1]]], "Input",
+ CellChangeTimes->{{3.684671473822412*^9, 3.684671527940176*^9}, {
+  3.684671585040866*^9, 3.684671610904838*^9}, {3.684671724612379*^9, 
+  3.684671764952637*^9}, {3.684671867008842*^9, 3.684671872088693*^9}, {
+  3.684672779052845*^9, 3.684672812157639*^9}, {3.684737915792525*^9, 
+  3.684737916443583*^9}, {3.685537212854935*^9, 3.685537222295971*^9}}]
 },
 CellGrouping->Manual,
-WindowSize->{648, 716},
-WindowMargins->{{-10, Automatic}, {Automatic, -10}},
+WindowSize->{1297, 744},
+WindowMargins->{{Automatic, 0}, {0, Automatic}},
 FrontEndVersion->"9.0 for Linux x86 (32-bit) (November 20, 2012)",
 StyleDefinitions->"Default.nb"
 ]
@@ -1088,9 +1104,9 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 159, 2, 164, "Title"],
-Cell[742, 26, 301, 6, 53, "Text"],
-Cell[1046, 34, 175, 4, 31, "Text"],
+Cell[580, 22, 159, 2, 108, "Title"],
+Cell[742, 26, 301, 6, 32, "Text"],
+Cell[1046, 34, 175, 4, 30, "Text"],
 Cell[CellGroupData[{
 Cell[1246, 42, 145, 2, 60, "Subsection"],
 Cell[1394, 46, 294, 5, 32, "Input"],
@@ -1099,7 +1115,7 @@ Cell[1713, 55, 222, 6, 32, "Input"],
 Cell[1938, 63, 184, 5, 32, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2159, 73, 2161, 61, 275, "Input"],
+Cell[2159, 73, 2161, 61, 143, "Input"],
 Cell[CellGroupData[{
 Cell[4345, 138, 268, 6, 23, "Print"],
 Cell[4616, 146, 270, 6, 23, "Print"],
@@ -1117,7 +1133,7 @@ Cell[6358, 200, 222, 6, 32, "Input"],
 Cell[6583, 208, 212, 6, 32, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[6832, 219, 2161, 61, 275, "Input"],
+Cell[6832, 219, 2161, 61, 143, "Input"],
 Cell[CellGroupData[{
 Cell[9018, 284, 290, 7, 23, "Print"],
 Cell[9311, 293, 270, 6, 23, "Print"],
@@ -1135,7 +1151,7 @@ Cell[11053, 346, 320, 8, 32, "Input"],
 Cell[11376, 356, 312, 8, 32, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[11725, 369, 2161, 61, 275, "Input"],
+Cell[11725, 369, 2161, 61, 143, "Input"],
 Cell[CellGroupData[{
 Cell[13911, 434, 308, 6, 23, "Print"],
 Cell[14222, 442, 291, 6, 23, "Print"],
@@ -1153,7 +1169,7 @@ Cell[16267, 502, 320, 8, 32, "Input"],
 Cell[16590, 512, 312, 8, 32, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[16939, 525, 2161, 61, 275, "Input"],
+Cell[16939, 525, 2161, 61, 143, "Input"],
 Cell[CellGroupData[{
 Cell[19125, 590, 371, 7, 23, "Print"],
 Cell[19499, 599, 329, 6, 23, "Print"],
@@ -1164,7 +1180,7 @@ Cell[20469, 623, 587, 15, 44, "Print"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[21117, 645, 736, 13, 72, "Input"],
+Cell[21117, 645, 736, 13, 45, "Input"],
 Cell[21856, 660, 220, 6, 32, "Input"],
 Cell[CellGroupData[{
 Cell[22101, 670, 329, 8, 32, "Input"],
@@ -1199,7 +1215,8 @@ Cell[34307, 1042, 903, 24, 39, "Print"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
-}, Open  ]]
+}, Open  ]],
+Cell[35261, 1072, 836, 14, 45, "Input"]
 }
 ]
 *)
