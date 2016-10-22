@@ -1,0 +1,4 @@
+The development of this repository was substantially contributed by (alphabetic order):
+
+- Simone Peirone: Instituut Lorentz Leiden University;
+- Marco Raveri: International School for Advanced Studies (SISSA);
