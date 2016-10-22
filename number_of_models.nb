@@ -1,0 +1,709 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     26168,        700]
+NotebookOptionsPosition[     23236,        596]
+NotebookOutlinePosition[     23589,        612]
+CellTagsIndexPosition[     23546,        609]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Number of models in EFTCAMB:", "Title",
+ CellChangeTimes->{{3.680842315577482*^9, 3.6808423411354437`*^9}, {
+  3.686157042913549*^9, 3.6861570486070557`*^9}},
+ Background->RGBColor[0.87, 0.94, 1]],
+
+Cell["\<\
+This notebook contains the calculation of the raw number of models in EFTCAMB.\
+\>", "Text",
+ CellChangeTimes->{{3.6808423472062883`*^9, 3.680842381621338*^9}, {
+  3.684757570304018*^9, 3.684757571114898*^9}, {3.686157062351047*^9, 
+  3.6861570746462927`*^9}},
+ FontSize->16],
+
+Cell["Authors: Marco Raveri", "Text",
+ CellChangeTimes->{{3.68084511898875*^9, 3.680845131923455*^9}, {
+  3.684757489444433*^9, 3.684757493080155*^9}, {3.686157082581572*^9, 
+  3.686157083518055*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["LCDM :", "Subsubsection",
+ CellChangeTimes->{{3.6861576439570303`*^9, 3.686157658672494*^9}}],
+
+Cell["LCDM is a model after all...", "Text",
+ CellChangeTimes->{{3.668834943931933*^9, 3.668834952777281*^9}, 
+   3.686157154729415*^9, {3.686157660699745*^9, 3.6861576630349693`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"models", "=", "1"}]], "Input",
+ CellChangeTimes->{{3.668834755544916*^9, 3.668834757830117*^9}, {
+   3.668834837716529*^9, 3.668834841003327*^9}, 3.686157689472249*^9}],
+
+Cell[BoxData["1"], "Output",
+ CellChangeTimes->{
+  3.686157689849635*^9, 3.686158190682764*^9, {3.6861584136530437`*^9, 
+   3.6861584202441607`*^9}, 3.686158582212068*^9, 3.6861586171737537`*^9, 
+   3.686158678591976*^9, 3.686159179917014*^9, 3.686159236936015*^9, 
+   3.6861595702961903`*^9, 3.686159625979512*^9, 3.686159889055316*^9, 
+   3.686159960763175*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Pure EFT :", "Subsubsection",
+ CellChangeTimes->{{3.686157671078453*^9, 3.686157680037237*^9}}],
+
+Cell["\<\
+Pure EFT: 7 functions of time, for each 5 models plus w_DE that has 6 choices\
+\
+\>", "Text",
+ CellChangeTimes->{{3.66883495659453*^9, 3.668834958994933*^9}, {
+  3.686157157000703*^9, 3.686157186744609*^9}, {3.686157280150222*^9, 
+  3.686157314916153*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"functionsoftimemodels", "=", "5"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"wDEfunctionsoftimemodels", "=", "6"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.6861573385310698`*^9, 3.686157353913612*^9}, {
+  3.686157409352826*^9, 3.6861574205923653`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"PEFTModels", "=", 
+  RowBox[{
+   RowBox[{"wDEfunctionsoftimemodels", "*", 
+    RowBox[{"(", 
+     RowBox[{"Length", "[", 
+      RowBox[{"Tuples", "[", 
+       RowBox[{
+        RowBox[{"Table", "[", 
+         RowBox[{"i", ",", 
+          RowBox[{"{", 
+           RowBox[{"i", ",", "0", ",", 
+            RowBox[{"functionsoftimemodels", "-", "1"}]}], "}"}]}], "]"}], 
+        ",", "7"}], "]"}], "]"}], ")"}]}], "-", "1"}]}]], "Input",
+ CellChangeTimes->{{3.668834883461816*^9, 3.668834892698678*^9}, 
+   3.6688349360812798`*^9, {3.686157237964258*^9, 3.686157240147876*^9}, {
+   3.686157401322702*^9, 3.686157424217041*^9}, {3.686157941480729*^9, 
+   3.6861579451879377`*^9}, {3.68615802879598*^9, 3.686158039057931*^9}, 
+   3.6861581075540037`*^9}],
+
+Cell[BoxData["468749"], "Output",
+ CellChangeTimes->{
+  3.668834936914466*^9, 3.668835432353602*^9, 3.66883573149644*^9, {
+   3.6861574032998343`*^9, 3.6861574300076036`*^9}, 3.6861581908939133`*^9, {
+   3.6861584138663273`*^9, 3.6861584204778757`*^9}, 3.686158582489295*^9, 
+   3.686158617430579*^9, 3.686158678844967*^9, 3.686159180220961*^9, 
+   3.6861592371983557`*^9, 3.686159570570677*^9, 3.686159626264505*^9, 
+   3.686159889320263*^9, 3.686159961026011*^9}]
+}, Open  ]],
+
+Cell["\<\
+Pure EFT with Horndeski constraint : same as before but we count only models \
+with gamma3 different from zero\
+\>", "Text",
+ CellChangeTimes->{{3.668835045781193*^9, 3.6688350528031693`*^9}, {
+  3.686157473627316*^9, 3.686157526188998*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"list", "=", 
+   RowBox[{"Tuples", "[", 
+    RowBox[{
+     RowBox[{"Table", "[", 
+      RowBox[{"i", ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "0", ",", 
+         RowBox[{"functionsoftimemodels", "-", "1"}]}], "}"}]}], "]"}], ",", 
+     "4"}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.686157530644658*^9, 3.686157542869689*^9}, {
+  3.686157592315543*^9, 3.6861575923825293`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"PEFTModels", "=", 
+  RowBox[{"PEFTModels", "+", 
+   RowBox[{"wDEfunctionsoftimemodels", "*", 
+    RowBox[{"Length", "[", 
+     RowBox[{"Select", "[", 
+      RowBox[{"list", ",", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"#", "[", 
+          RowBox[{"[", "4", "]"}], "]"}], "\[NotEqual]", "0"}], "&"}]}], 
+      "]"}], "]"}]}], "-", "1"}]}]], "Input",
+ CellChangeTimes->{{3.668835257208428*^9, 3.668835259307291*^9}, {
+  3.66883542160843*^9, 3.668835429361246*^9}, {3.686157630144772*^9, 
+  3.686157630356946*^9}, {3.6861579515407753`*^9, 3.686157951595866*^9}, {
+  3.686158041259818*^9, 3.6861580421714163`*^9}, {3.6861581043155317`*^9, 
+  3.686158106842554*^9}}],
+
+Cell[BoxData["471748"], "Output",
+ CellChangeTimes->{
+  3.668835432375231*^9, 3.668835731545459*^9, 3.686157483588575*^9, {
+   3.686157616257698*^9, 3.686157631925961*^9}, 3.686158190983526*^9, {
+   3.68615841393993*^9, 3.686158420530798*^9}, 3.686158582546377*^9, 
+   3.6861586174920483`*^9, 3.686158678934136*^9, 3.6861591803132067`*^9, 
+   3.68615923725352*^9, 3.686159570620185*^9, 3.686159626347567*^9, 
+   3.68615988941053*^9, 3.686159961078904*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Alternative EFT parametrizations:", "Subsubsection",
+ CellChangeTimes->{{3.686157671078453*^9, 3.686157680037237*^9}, {
+  3.686157713580373*^9, 3.68615772030007*^9}}],
+
+Cell["\<\
+RPH: 4 functions of time, for each 5 models plus w_DE that has 6 choices\
+\>", "Text",
+ CellChangeTimes->{{3.66883561359017*^9, 3.668835620565792*^9}, {
+  3.686157756901067*^9, 3.686157779325295*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"functionsoftimemodels", "=", "5"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"wDEfunctionsoftimemodels", "=", "6"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.6861573385310698`*^9, 3.686157353913612*^9}, {
+  3.686157409352826*^9, 3.6861574205923653`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"AltParModels", "=", 
+  RowBox[{
+   RowBox[{"wDEfunctionsoftimemodels", "*", 
+    RowBox[{"(", 
+     RowBox[{"Length", "[", 
+      RowBox[{"Tuples", "[", 
+       RowBox[{
+        RowBox[{"Table", "[", 
+         RowBox[{"i", ",", 
+          RowBox[{"{", 
+           RowBox[{"i", ",", "0", ",", 
+            RowBox[{"functionsoftimemodels", "-", "1"}]}], "}"}]}], "]"}], 
+        ",", "4"}], "]"}], "]"}], ")"}]}], "-", "1"}]}]], "Input",
+ CellChangeTimes->{{3.668834883461816*^9, 3.668834892698678*^9}, 
+   3.6688349360812798`*^9, {3.686157237964258*^9, 3.686157240147876*^9}, {
+   3.686157401322702*^9, 3.686157424217041*^9}, {3.6861578104726067`*^9, 
+   3.686157811268291*^9}, {3.68615795361508*^9, 3.68615795465167*^9}, {
+   3.6861580452905188`*^9, 3.686158050692012*^9}, {3.6861581005533047`*^9, 
+   3.686158100792646*^9}}],
+
+Cell[BoxData["3749"], "Output",
+ CellChangeTimes->{
+  3.668834936914466*^9, 3.668835432353602*^9, 3.66883573149644*^9, {
+   3.6861574032998343`*^9, 3.6861574300076036`*^9}, 3.686158191062598*^9, {
+   3.686158413995892*^9, 3.686158420584589*^9}, 3.6861585825974903`*^9, 
+   3.686158617543516*^9, 3.686158678991194*^9, 3.6861591803708067`*^9, 
+   3.686159237320313*^9, 3.686159570670781*^9, 3.686159626430863*^9, 
+   3.686159889467115*^9, 3.68615996113092*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Designer mapping:", "Subsubsection",
+ CellChangeTimes->{{3.686157671078453*^9, 3.686157680037237*^9}, {
+  3.686157713580373*^9, 3.68615772030007*^9}, {3.6861578383139563`*^9, 
+  3.686157841290207*^9}}],
+
+Cell["\<\
+Designer f(R): same number of models than expansion history models:\
+\>", "Text",
+ CellChangeTimes->{{3.66883561359017*^9, 3.668835620565792*^9}, {
+  3.686157756901067*^9, 3.686157779325295*^9}, {3.686157844305751*^9, 
+  3.686157880537129*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"wDEfunctionsoftimemodels", "=", "6"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"DesignerModels", "=", "wDEfunctionsoftimemodels"}]}], "Input",
+ CellChangeTimes->{{3.6861578856020613`*^9, 3.686157892163299*^9}, {
+  3.6861580564413347`*^9, 3.6861580953284883`*^9}}],
+
+Cell[BoxData["6"], "Output",
+ CellChangeTimes->{
+  3.6861580735158567`*^9, 3.686158191117536*^9, {3.6861584140548964`*^9, 
+   3.6861584206436872`*^9}, 3.686158582645667*^9, 3.686158617592524*^9, 
+   3.6861586790395603`*^9, 3.686159180417984*^9, 3.686159237367835*^9, 
+   3.6861595707176447`*^9, 3.686159626481476*^9, 3.686159889515356*^9, 
+   3.686159961179241*^9}]
+}, Open  ]],
+
+Cell["\<\
+Designer minimally coupled quintessence: we do not count it in the total as \
+it is contained in pure EFT.\
+\>", "Text",
+ CellChangeTimes->{{3.66883561359017*^9, 3.668835620565792*^9}, {
+  3.686157756901067*^9, 3.686157779325295*^9}, {3.686157844305751*^9, 
+  3.686157880537129*^9}, {3.686157916581698*^9, 3.686157922941556*^9}, {
+  3.6861579624187727`*^9, 3.686157980010357*^9}, {3.686158391369604*^9, 
+  3.686158394585536*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"DesignerModels5e", "=", "wDEfunctionsoftimemodels"}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.6861583993049726`*^9, 3.6861584078329678`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Full mapping:", "Subsubsection",
+ CellChangeTimes->{{3.686157671078453*^9, 3.686157680037237*^9}, {
+  3.686157713580373*^9, 3.68615772030007*^9}, {3.6861578383139563`*^9, 
+  3.686157841290207*^9}, {3.686157988170993*^9, 3.6861579887221193`*^9}}],
+
+Cell["\<\
+We just have Horava for now that counts as two (with solar system constraints \
+or not).\
+\>", "Text",
+ CellChangeTimes->{{3.66883561359017*^9, 3.668835620565792*^9}, {
+  3.686157756901067*^9, 3.686157779325295*^9}, {3.686157844305751*^9, 
+  3.686157880537129*^9}, {3.686157990954091*^9, 3.686158018217552*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FullMapModels", "=", "2"}]], "Input",
+ CellChangeTimes->{{3.6861580833373623`*^9, 3.686158091016486*^9}}],
+
+Cell[BoxData["2"], "Output",
+ CellChangeTimes->{
+  3.686158191164914*^9, {3.686158414111075*^9, 3.686158420694347*^9}, 
+   3.686158582702977*^9, 3.6861586176489677`*^9, 3.6861586790965*^9, 
+   3.686159180474546*^9, 3.6861592374253397`*^9, 3.686159570801435*^9, 
+   3.6861596265433702`*^9, 3.686159889598571*^9, 3.686159961230236*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Summary:", "Subsubsection",
+ CellChangeTimes->{{3.686157671078453*^9, 3.686157680037237*^9}, {
+  3.686157713580373*^9, 3.68615772030007*^9}, {3.6861578383139563`*^9, 
+  3.686157841290207*^9}, {3.686157988170993*^9, 3.6861579887221193`*^9}, {
+  3.6861581303358583`*^9, 3.686158132078952*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TotalModelNumber", "=", " ", 
+  RowBox[{
+  "models", "+", "PEFTModels", "+", "AltParModels", "+", "DesignerModels", 
+   "+", "FullMapModels"}]}]], "Input",
+ CellChangeTimes->{{3.6861586011766443`*^9, 3.686158608112734*^9}}],
+
+Cell[BoxData["475506"], "Output",
+ CellChangeTimes->{3.6861586176980753`*^9, 3.686158679158873*^9, 
+  3.6861591805221987`*^9, 3.686159237487822*^9, 3.6861595708546047`*^9, 
+  3.68615962660489*^9, 3.686159889651434*^9, 3.68615996127878*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"Print", "[", 
+  RowBox[{
+  "\"\<Number of Pure EFT models                         : \>\"", ",", " ", 
+   "PEFTModels"}], " ", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", 
+  RowBox[{
+  "\"\<Number of Alternative EFT parametrizations models : \>\"", ",", " ", 
+   "AltParModels"}], " ", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", 
+  RowBox[{
+  "\"\<Number of Designer mapping models                 : \>\"", ",", " ", 
+   "DesignerModels"}], " ", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", 
+  RowBox[{
+  "\"\<Number of Full mapping models                     : \>\"", ",", " ", 
+   "FullMapModels"}], " ", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", 
+  RowBox[{
+  "\"\<Total number of models, without parametrizations  : \>\"", ",", " ", 
+   RowBox[{
+   "models", "+", "DesignerModels", "+", "DesignerModels5e", "+", 
+    "FullMapModels"}]}], " ", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", 
+  RowBox[{
+  "\"\<Total number of models                            : \>\"", ",", " ", 
+   "TotalModelNumber"}], " ", "]"}]}], "Input",
+ CellChangeTimes->{{3.686158143177277*^9, 3.6861583573084908`*^9}, {
+   3.686158412402664*^9, 3.68615843748096*^9}, 3.686158612821712*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Number of Pure EFT models                         : \"\>", 
+   "\[InvisibleSpace]", "471748"}],
+  SequenceForm["Number of Pure EFT models                         : ", 471748],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.686158335267809*^9, 3.686158357854053*^9}, {
+   3.686158414155517*^9, 3.686158438627907*^9}, 3.6861585827483797`*^9, 
+   3.686158617760386*^9, 3.686158679210103*^9, 3.6861591805724688`*^9, 
+   3.6861592375387697`*^9, 3.686159570904855*^9, 3.6861596266687737`*^9, 
+   3.6861598897025137`*^9, 3.6861599613301163`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Number of Alternative EFT parametrizations models : \"\>", 
+   "\[InvisibleSpace]", "3749"}],
+  SequenceForm["Number of Alternative EFT parametrizations models : ", 3749],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.686158335267809*^9, 3.686158357854053*^9}, {
+   3.686158414155517*^9, 3.686158438627907*^9}, 3.6861585827483797`*^9, 
+   3.686158617760386*^9, 3.686158679210103*^9, 3.6861591805724688`*^9, 
+   3.6861592375387697`*^9, 3.686159570904855*^9, 3.6861596266687737`*^9, 
+   3.6861598897025137`*^9, 3.686159961339476*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Number of Designer mapping models                 : \"\>", 
+   "\[InvisibleSpace]", "6"}],
+  SequenceForm["Number of Designer mapping models                 : ", 6],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.686158335267809*^9, 3.686158357854053*^9}, {
+   3.686158414155517*^9, 3.686158438627907*^9}, 3.6861585827483797`*^9, 
+   3.686158617760386*^9, 3.686158679210103*^9, 3.6861591805724688`*^9, 
+   3.6861592375387697`*^9, 3.686159570904855*^9, 3.6861596266687737`*^9, 
+   3.6861598897025137`*^9, 3.6861599613515253`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Number of Full mapping models                     : \"\>", 
+   "\[InvisibleSpace]", "2"}],
+  SequenceForm["Number of Full mapping models                     : ", 2],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.686158335267809*^9, 3.686158357854053*^9}, {
+   3.686158414155517*^9, 3.686158438627907*^9}, 3.6861585827483797`*^9, 
+   3.686158617760386*^9, 3.686158679210103*^9, 3.6861591805724688`*^9, 
+   3.6861592375387697`*^9, 3.686159570904855*^9, 3.6861596266687737`*^9, 
+   3.6861598897025137`*^9, 3.686159961363665*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Total number of models, without parametrizations  : \"\>", 
+   "\[InvisibleSpace]", "15"}],
+  SequenceForm["Total number of models, without parametrizations  : ", 15],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.686158335267809*^9, 3.686158357854053*^9}, {
+   3.686158414155517*^9, 3.686158438627907*^9}, 3.6861585827483797`*^9, 
+   3.686158617760386*^9, 3.686158679210103*^9, 3.6861591805724688`*^9, 
+   3.6861592375387697`*^9, 3.686159570904855*^9, 3.6861596266687737`*^9, 
+   3.6861598897025137`*^9, 3.6861599613758*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Total number of models                            : \"\>", 
+   "\[InvisibleSpace]", "475506"}],
+  SequenceForm["Total number of models                            : ", 475506],
+  Editable->False]], "Print",
+ CellChangeTimes->{{3.686158335267809*^9, 3.686158357854053*^9}, {
+   3.686158414155517*^9, 3.686158438627907*^9}, 3.6861585827483797`*^9, 
+   3.686158617760386*^9, 3.686158679210103*^9, 3.6861591805724688`*^9, 
+   3.6861592375387697`*^9, 3.686159570904855*^9, 3.6861596266687737`*^9, 
+   3.6861598897025137`*^9, 3.686159961387884*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell["\<\
+An average model takes approximately 24 hours on a 64 core machine to do a \
+full MCMC. This means that we need the following number of floating point \
+operations to complete one model:\
+\>", "Text",
+ CellChangeTimes->{{3.66883561359017*^9, 3.668835620565792*^9}, {
+  3.686157756901067*^9, 3.686157779325295*^9}, {3.686157844305751*^9, 
+  3.686157880537129*^9}, {3.686157990954091*^9, 3.686158018217552*^9}, {
+  3.686158543649786*^9, 3.686158564096364*^9}, {3.686159096641651*^9, 
+  3.686159145038851*^9}, {3.686159201466748*^9, 3.686159204186858*^9}, {
+  3.6861596451147003`*^9, 3.686159662985373*^9}, {3.686159856518663*^9, 
+  3.686159859964772*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"OperationsPerModel", "=", 
+  RowBox[{"64", "*", "2.8", "*", "8", "*", "86400", "*", 
+   RowBox[{"10", "^", "9"}]}]}]], "Input",
+ CellChangeTimes->{{3.6861589376849422`*^9, 3.686158968432914*^9}, {
+  3.686159004276586*^9, 3.6861590045266657`*^9}, {3.6861590446712923`*^9, 
+  3.686159049805875*^9}, {3.6861590821438513`*^9, 3.686159082795723*^9}, {
+  3.6861592084855556`*^9, 3.6861592134837427`*^9}, {3.686159422400535*^9, 
+  3.6861594325192423`*^9}, {3.68615986257823*^9, 3.6861598639893303`*^9}}],
+
+Cell[BoxData["1.2386304`*^17"], "Output",
+ CellChangeTimes->{
+  3.686158968831585*^9, 3.6861590048105288`*^9, {3.6861590454103394`*^9, 
+   3.68615905023413*^9}, 3.686159083497609*^9, 3.6861591469615717`*^9, 
+   3.6861591806895847`*^9, 3.6861592376543493`*^9, 3.6861594331317253`*^9, 
+   3.68615957102232*^9, 3.68615962680268*^9, 3.686159889818861*^9, 
+   3.686159961449684*^9}]
+}, Open  ]],
+
+Cell["\<\
+The total number of FLOPs that it will take to test all models in EFTCAMB is \
+then:\
+\>", "Text",
+ CellChangeTimes->{{3.66883561359017*^9, 3.668835620565792*^9}, {
+  3.686157756901067*^9, 3.686157779325295*^9}, {3.686157844305751*^9, 
+  3.686157880537129*^9}, {3.686157990954091*^9, 3.686158018217552*^9}, {
+  3.686158543649786*^9, 3.686158564096364*^9}, {3.686159096641651*^9, 
+  3.686159145038851*^9}, {3.6861591900031967`*^9, 3.686159235362071*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"OperationsPerEFTCAMB", "=", 
+  RowBox[{"OperationsPerModel", "*", "TotalModelNumber"}]}]], "Input",
+ CellChangeTimes->{{3.686159168832489*^9, 3.686159175837674*^9}, {
+  3.686159210451527*^9, 3.6861592157653313`*^9}, {3.6861598741519623`*^9, 
+  3.686159879972879*^9}}],
+
+Cell[BoxData["5.889761869824`*^22"], "Output",
+ CellChangeTimes->{3.686159180738996*^9, 3.6861592377046423`*^9, 
+  3.686159434863091*^9, 3.6861595710727654`*^9, 3.6861596268521976`*^9, 
+  3.686159889870536*^9, 3.686159961500887*^9}]
+}, Open  ]],
+
+Cell["\<\
+If we were to use the most powerful supercomputer \
+(https://www.top500.org/lists/2016/06/), assuming full machine and perfect \
+scalability, it will take this time to test all models in EFTCAMB:\
+\>", "Text",
+ CellChangeTimes->{{3.66883561359017*^9, 3.668835620565792*^9}, {
+  3.686157756901067*^9, 3.686157779325295*^9}, {3.686157844305751*^9, 
+  3.686157880537129*^9}, {3.686157990954091*^9, 3.686158018217552*^9}, {
+  3.686158543649786*^9, 3.686158564096364*^9}, {3.686159096641651*^9, 
+  3.686159145038851*^9}, {3.6861591900031967`*^9, 3.686159235362071*^9}, {
+  3.6861593022189074`*^9, 3.6861593896555767`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"BestFLOPS", "=", 
+   RowBox[{"93014.6", "*", 
+    RowBox[{"10", "^", "12"}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.686159402654262*^9, 3.686159410151483*^9}, {
+  3.686159441630953*^9, 3.6861594786470947`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"UnitConvert", "[", 
+  RowBox[{
+   RowBox[{"Quantity", "[", 
+    RowBox[{
+     RowBox[{"OperationsPerEFTCAMB", "/", "BestFLOPS"}], ",", 
+     "\"\<second\>\""}], "]"}], ",", "\"\<hour\>\""}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"UnitConvert", "[", 
+  RowBox[{
+   RowBox[{"Quantity", "[", 
+    RowBox[{
+     RowBox[{"OperationsPerEFTCAMB", "/", "BestFLOPS"}], ",", 
+     "\"\<second\>\""}], "]"}], ",", "\"\<day\>\""}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"UnitConvert", "[", 
+  RowBox[{
+   RowBox[{"Quantity", "[", 
+    RowBox[{
+     RowBox[{"OperationsPerEFTCAMB", "/", "BestFLOPS"}], ",", 
+     "\"\<second\>\""}], "]"}], ",", "\"\<years\>\""}], "]"}]}], "Input",
+ CellChangeTimes->{{3.686159023301956*^9, 3.686159025281304*^9}, {
+   3.686159505429945*^9, 3.686159532769992*^9}, 3.686159888190968*^9, {
+   3.686159925227942*^9, 3.6861599321471252`*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{"175.89120028898688`"},
+  "QuantityUnit",
+  DisplayFunction->(TooltipBox[
+    StyleBox[
+     RowBox[{#, "\[InvisibleSpace]", 
+       StyleBox[
+        RowBox[{" ", "\"h\""}], "QuantityUnitTraditionalLabel"]}], 
+     ShowStringCharacters -> False], "Unit: hours"]& ),
+  InterpretationFunction->(RowBox[{"Quantity", "[", 
+     RowBox[{#, ",", "\"Hours\""}], "]"}]& )]], "Output",
+ CellChangeTimes->{
+  3.686159026394403*^9, 3.686159180790084*^9, 3.686159237754939*^9, {
+   3.686159513418027*^9, 3.68615953311124*^9}, 3.6861595711239853`*^9, 
+   3.68615962690442*^9, 3.686159889924016*^9, {3.686159933330737*^9, 
+   3.686159961553586*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{"7.32880001204112`"},
+  "QuantityUnit",
+  DisplayFunction->(TooltipBox[
+    StyleBox[
+     RowBox[{#, "\[InvisibleSpace]", 
+       StyleBox[
+        RowBox[{" ", "\"days\""}], "QuantityUnitTraditionalLabel"]}], 
+     ShowStringCharacters -> False], "Unit: days"]& ),
+  InterpretationFunction->(RowBox[{"Quantity", "[", 
+     RowBox[{#, ",", "\"Days\""}], "]"}]& )]], "Output",
+ CellChangeTimes->{
+  3.686159026394403*^9, 3.686159180790084*^9, 3.686159237754939*^9, {
+   3.686159513418027*^9, 3.68615953311124*^9}, 3.6861595711239853`*^9, 
+   3.68615962690442*^9, 3.686159889924016*^9, {3.686159933330737*^9, 
+   3.686159961561553*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{"0.020078904142578412`"},
+  "QuantityUnit",
+  DisplayFunction->(TooltipBox[
+    StyleBox[
+     RowBox[{#, "\[InvisibleSpace]", 
+       StyleBox[
+        RowBox[{" ", "\"yr\""}], "QuantityUnitTraditionalLabel"]}], 
+     ShowStringCharacters -> False], "Unit: years"]& ),
+  InterpretationFunction->(RowBox[{"Quantity", "[", 
+     RowBox[{#, ",", "\"Years\""}], "]"}]& )]], "Output",
+ CellChangeTimes->{
+  3.686159026394403*^9, 3.686159180790084*^9, 3.686159237754939*^9, {
+   3.686159513418027*^9, 3.68615953311124*^9}, 3.6861595711239853`*^9, 
+   3.68615962690442*^9, 3.686159889924016*^9, {3.686159933330737*^9, 
+   3.686159961566268*^9}}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1440, 851},
+WindowMargins->{{7, Automatic}, {Automatic, 0}},
+FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (June 27, \
+2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 202, 3, 108, "Title"],
+Cell[785, 27, 285, 6, 33, "Text"],
+Cell[1073, 35, 200, 3, 30, "Text"],
+Cell[CellGroupData[{
+Cell[1298, 42, 99, 1, 35, "Subsubsection"],
+Cell[1400, 45, 184, 2, 30, "Text"],
+Cell[CellGroupData[{
+Cell[1609, 51, 192, 3, 28, "Input"],
+Cell[1804, 56, 363, 6, 28, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2216, 68, 101, 1, 35, "Subsubsection"],
+Cell[2320, 71, 266, 6, 30, "Text"],
+Cell[2589, 79, 299, 6, 46, "Input"],
+Cell[CellGroupData[{
+Cell[2913, 89, 772, 18, 28, "Input"],
+Cell[3688, 109, 465, 7, 28, "Output"]
+}, Open  ]],
+Cell[4168, 119, 251, 5, 30, "Text"],
+Cell[4422, 126, 431, 12, 28, "Input"],
+Cell[CellGroupData[{
+Cell[4878, 142, 696, 16, 28, "Input"],
+Cell[5577, 160, 455, 7, 28, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6081, 173, 172, 2, 35, "Subsubsection"],
+Cell[6256, 177, 210, 4, 30, "Text"],
+Cell[6469, 183, 299, 6, 46, "Input"],
+Cell[CellGroupData[{
+Cell[6793, 193, 849, 19, 28, "Input"],
+Cell[7645, 214, 458, 7, 28, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8152, 227, 207, 3, 35, "Subsubsection"],
+Cell[8362, 232, 254, 5, 30, "Text"],
+Cell[CellGroupData[{
+Cell[8641, 241, 302, 6, 46, "Input"],
+Cell[8946, 249, 365, 6, 28, "Output"]
+}, Open  ]],
+Cell[9326, 258, 439, 8, 30, "Text"],
+Cell[9768, 268, 178, 4, 28, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9983, 277, 251, 3, 35, "Subsubsection"],
+Cell[10237, 282, 321, 6, 30, "Text"],
+Cell[CellGroupData[{
+Cell[10583, 292, 129, 2, 28, "Input"],
+Cell[10715, 296, 333, 5, 28, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11097, 307, 297, 4, 35, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[11419, 315, 247, 5, 28, "Input"],
+Cell[11669, 322, 239, 3, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11945, 330, 1242, 28, 114, "Input"],
+Cell[CellGroupData[{
+Cell[13212, 362, 592, 10, 21, "Print"],
+Cell[13807, 374, 586, 10, 22, "Print"],
+Cell[14396, 386, 582, 10, 22, "Print"],
+Cell[14981, 398, 580, 10, 22, "Print"],
+Cell[15564, 410, 580, 10, 22, "Print"],
+Cell[16147, 422, 590, 10, 21, "Print"]
+}, Open  ]]
+}, Open  ]],
+Cell[16764, 436, 663, 11, 30, "Text"],
+Cell[CellGroupData[{
+Cell[17452, 451, 520, 8, 28, "Input"],
+Cell[17975, 461, 377, 6, 32, "Output"]
+}, Open  ]],
+Cell[18367, 470, 463, 8, 30, "Text"],
+Cell[CellGroupData[{
+Cell[18855, 482, 291, 5, 28, "Input"],
+Cell[19149, 489, 232, 3, 32, "Output"]
+}, Open  ]],
+Cell[19396, 495, 627, 10, 30, "Text"],
+Cell[20026, 507, 249, 6, 28, "Input"],
+Cell[CellGroupData[{
+Cell[20300, 517, 893, 23, 63, "Input"],
+Cell[21196, 542, 664, 15, 28, "Output"],
+Cell[21863, 559, 663, 15, 28, "Output"],
+Cell[22529, 576, 667, 15, 62, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
